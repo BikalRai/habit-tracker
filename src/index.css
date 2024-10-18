@@ -1,13 +1,63 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  --button-bg: rgb(16, 211, 127);
+  --button-bg-hover: rgba(16, 211, 127, 0.5);
+  --bg-color: rgb(156, 184, 180);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  min-height: 100dvh;
+  background-color: var(--bg-color);
+}
+
+.button {
+  border: none;
+  padding: 0.5rem 1.5rem;
+  background-color: var(--button-bg);
+  color: #123123;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.button:hover {
+  background-color: var(--button-bg-hover);
+}
+
+input {
+  border: none;
+  outline: none;
+}
+
+input[type="checkbox"] {
+  width: 1.2rem;
+  height: 1.2rem;
+  cursor: pointer;
+}
+
+input[type="text"] {
+  padding: 0.5rem;
+}
+
+input[type="checkbox"]:checked {
+  accent-color: rgb(50, 151, 224);
+}
+
+li span.done {
+  text-decoration: line-through;
+}
+
+.add-habit {
+  display: flex;
+  align-items: center;
+}
+
+.add-habit button {
+  margin-left: 1rem;
 }
